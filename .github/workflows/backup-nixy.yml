@@ -1,0 +1,44 @@
+# Nama workflow
+name: Backup Repo ke Telegram Saat Ada Update
+
+# Pemicu workflow
+on:
+  # Jalankan setiap kali ada push/update ke branch 'main'
+  push:
+    branches:
+      - main  # Ganti 'main' jika nama branch utama Anda berbeda (misal: 'master')
+
+  # Tombol untuk menjalankan manual (opsional, bagus untuk testing)
+  workflow_dispatch:
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      # Langkah 1: Checkout kode versi terbaru yang baru saja di-push
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Langkah 2: Membuat file backup .zip dari kode tersebut
+      - name: Create Zip Archive
+        # Membuat zip dengan nama yang menyertakan nama repo
+        run: zip -r ${{ github.event.repository.name }}.zip .
+
+      # Langkah 3: Kirim file .zip yang sudah dibuat ke Telegram
+      - name: Kirim Backup ke Telegram
+        run: |
+          # Mengatur timezone ke Waktu Indonesia Barat (WIB / Asia/Jakarta)
+          export TZ="Asia/Jakarta"
+          
+          # Ambil 7 karakter pertama dari kode commit untuk caption
+          COMMIT_HASH=$(echo ${{ github.sha }} | cut -c1-7)
+          
+          # Buat caption dengan format tanggal dan waktu yang sudah benar (WIB)
+          # Menambahkan WIB secara manual di akhir untuk kejelasan
+          CAPTION="Update terbaru pada repo ${{ github.repository }} (commit: ${COMMIT_HASH}) pada $(date +'%d-%m-%Y %H:%M') WIB"
+
+          # Mengirim file .zip yang ada di runner
+          curl -s -F "chat_id=${{ secrets.TELEGRAM_CHAT_ID }}" \
+               -F "document=@${{ github.event.repository.name }}.zip" \
+               -F "caption=${CAPTION}" \
+               https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendDocument
