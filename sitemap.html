@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap - NIXY MINE</title>
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <meta name="description" content="Peta Situs (Sitemap) untuk NIXY MINE. Temukan semua daftar aplikasi dan game yang tersedia di situs kami dengan mudah.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        :root {
+            --bg-color: #f0f2f5;
+            --text-color: #2c3e50;
+            --text-color-light: #6c757d;
+            --card-bg: #ffffff;
+            --header-bg: #ffffff;
+            --shadow-color: rgba(0, 0, 0, 0.08);
+            --border-color: #e9e9e9;
+            --blue-color: #007bff;
+            --purple-color: #6f42c1;
+            --red-color: #dc3545;
+            --green-color: #28a745;
+            --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        body.dark-mode {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --text-color-light: #a0a0a0;
+            --card-bg: #1e1e1e;
+            --header-bg: #1e1e1e;
+            --shadow-color: rgba(0, 0, 0, 0.4);
+            --border-color: #333;
+        }
+        
+        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px 15px; }
+
+        header {
+            background-color: var(--header-bg);
+            box-shadow: 0 2px 4px var(--shadow-color);
+            padding: 10px 15px;
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky; 
+            top: 0; 
+            z-index: 998;
+        }
+        .header-left { display: flex; align-items: center; gap: 15px; }
+        .header-logo img { height: 30px; display: block; }
+        .header-btn {
+            background: none; border: none;
+            font-size: 1.4em;
+            color: var(--text-color-light);
+            cursor: pointer;
+            padding: 5px;
+        }
+        .header-btn:hover { color: var(--text-color); }
+        
+        .static-page-container {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 25px;
+            margin-top: 20px;
+            box-shadow: 0 4px 12px var(--shadow-color);
+        }
+        .static-page-container h1 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+        .static-page-container > p {
+            color: var(--text-color-light);
+            margin-bottom: 30px;
+        }
+        .sitemap-section {
+    margin-top: 40px; /* Atur angka ini untuk menambah atau mengurangi jarak */
+}
+        
+        .sitemap-section h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .sitemap-section h2 i {
+            font-size: 0.9em;
+            width: 35px;
+            height: 35px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            color: #fff;
+        }
+        .sitemap-section.apps h2 i { background-color: var(--purple-color); }
+        .sitemap-section.games h2 i { background-color: var(--red-color); }
+        .sitemap-section.blog h2 i { background-color: var(--green-color); }
+        
+        .sitemap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+        }
+        .sitemap-item a {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 15px;
+            display: block;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            box-shadow: 0 2px 5px var(--shadow-color);
+            transition: var(--transition-smooth);
+        }
+        .sitemap-item a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px var(--shadow-color);
+            border-color: var(--blue-color);
+            color: var(--blue-color);
+        }
+        .sitemap-item a:focus,
+.sitemap-item a:active {
+    outline: none; /* Menghilangkan border focus default */
+    background-color: transparent; /* Membuat background transparan saat aktif/fokus */
+    box-shadow: none; /* Menghilangkan shadow focus default jika ada */
+    border-color: var(--border-color); /* Mengembalikan warna border normal */
+    color: var(--text-color); /* Mengembalikan warna teks normal */
+}
+
+/* Optional: Untuk beberapa browser, mungkin perlu juga mengatur -webkit-tap-highlight-color */
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+        
+        #loading-message {
+            text-align: center;
+            padding: 40px;
+            font-style: italic;
+            color: var(--text-color-light);
+        }
+
+        /* == KODE FOOTER ASLI == */
+        .footer-container {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 12px var(--shadow-color);
+            margin-top: 50px;
+        }
+        .section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding: 0; }
+        .section-title-group { display: flex; align-items: center; gap: 10px; }
+        .section-icon { width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; background-color: #e9ecef; border-radius: 50%; color: #6c757d; font-size: 1.2em; }
+        .section-header h2 { font-size: 1.4em; color: var(--text-color); border-bottom: none; /* Menghapus border agar tidak konflik */ }
+        .footer-links-grid { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); /* <-- DIKEMBALIKAN SEPERTI SEMULA */
+            gap: 10px; 
+            margin-bottom: 20px; 
+        }
+        .footer-link { background-color: var(--bg-color); color: var(--text-color); padding: 8px; border-radius: 8px; text-align: center; text-decoration: none; font-size: 0.8em; font-weight: 500; transition: all 0.3s ease; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .footer-link:hover { background-color: var(--blue-color); color: white; }
+        .footer-social-icons { display: flex; justify-content: center; gap: 25px; padding: 20px 0; border-top: 1px solid var(--border-color); }
+        .footer-social-icons a { color: var(--text-color-light); font-size: 1.5em; transition: all 0.3s ease; }
+        .footer-social-icons a:hover { color: var(--blue-color); transform: scale(1.1); }
+        .footer-copyright { text-align: center; font-size: 0.8em; color: var(--text-color-light); padding-top: 15px; border-top: 1px solid var(--border-color); }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <a href="index.html" class="header-btn" aria-label="Kembali ke Beranda"><i class="fa-solid fa-arrow-left"></i></a>
+            <div class="header-logo">
+                <a href="index.html"><img src="navigasi.png" alt="NIXY MINE Logo"></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="static-page-container">
+                <h2><i class="fa-solid fa-sitemap"></i> Peta Situs (Sitemap)</h2>
+                <p>Jelajahi semua konten yang tersedia di NIXY MINE dengan mudah melalui daftar di bawah ini.</p>
+
+                <div id="sitemap-content">
+                    <p id="loading-message">Memuat daftar...</p>
+                </div>
+            </div>
+
+            <footer class="footer-container">
+                <div class="section-header">
+                   <div class="section-title-group">
+                   <span class="section-icon"><i class="fa fa-question-circle"></i></span>
+                    <h2>NIXY MINE - About Us</h2>
+                    </div>
+                </div>
+                <div class="footer-links-grid">
+                    <a href="privacy-policy.html" class="footer-link">Privacy</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                    <a href="terms.html" class="footer-link">Terms</a>
+                    <a href="disclaimer.html" class="footer-link">Disclaimer</a>
+                    <a href="dmca.html" class="footer-link">DMCA</a>
+                    <a href="sitemap.html" class="footer-link">Sitemap</a>
+                    <a href="cookie-policy.html" class="footer-link">Cookie</a>
+                </div>
+                <div class="footer-social-icons">
+                    <a href="https://t.me/+JZVMFir6yM0yZmY1" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="/" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    <a href="/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="/" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="footer-copyright">
+                    All Right Reserved Copyright &copy; <span id="current-year"></span>
+                </div>
+            </footer>
+        </div>
+    </main>
+    
+    <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const sitemapContent = document.getElementById('sitemap-content');
+        const loadingMessage = document.getElementById('loading-message');
+
+        const createBlogUrl = (title) => {
+            return title.toLowerCase()
+                .replace(/[^a-z0-9\s-]/g, '')
+                .trim()
+                .replace(/\s+/g, '-') 
+                + '.html';
+        };
+
+        const fetchAndBuildSitemap = async () => {
+            try {
+                const response = await fetch('index.html');
+                const text = await response.text();
+                
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(text, 'text/html');
+
+                const appItems = doc.querySelectorAll('#update-apps-list .app-card');
+                const gameItems = doc.querySelectorAll('#update-games-list .app-card');
+                const blogItems = doc.querySelectorAll('#blog-list .blog-post-item');
+                
+                sitemapContent.innerHTML = ''; 
+
+                const createSection = (title, iconClass, items, categoryClass) => {
+                    if (items.length > 0) {
+                        const section = document.createElement('div');
+                        section.className = `sitemap-section ${categoryClass}`;
+
+                        const header = document.createElement('h2');
+                        header.innerHTML = `<i class="${iconClass}"></i> ${title}`;
+                        section.appendChild(header);
+                        
+                        const grid = document.createElement('div');
+                        grid.className = 'sitemap-grid';
+
+                        items.forEach(item => {
+                            const link = item.getAttribute('href');
+                            const titleText = item.matches('.app-card') ? item.querySelector('h3').textContent : item.textContent.trim();
+                            const finalLink = item.matches('.blog-post-item') ? createBlogUrl(titleText) : link;
+
+                            const gridItem = document.createElement('div');
+                            gridItem.className = 'sitemap-item';
+                            gridItem.innerHTML = `<a href="${finalLink}">${titleText}</a>`;
+                            grid.appendChild(gridItem);
+                        });
+                        section.appendChild(grid);
+                        sitemapContent.appendChild(section);
+                    }
+                };
+                
+                createSection('Daftar Aplikasi', 'fa-solid fa-layer-group', appItems, 'apps');
+                createSection('Daftar Game', 'fa-solid fa-gamepad', gameItems, 'games');
+                createSection('Daftar Artikel Blog', 'fa-solid fa-newspaper', blogItems, 'blog');
+
+            } catch (error) {
+                loadingMessage.textContent = 'Gagal memuat sitemap. Silakan coba lagi nanti.';
+                console.error('Error fetching sitemap:', error);
+            }
+        };
+
+        fetchAndBuildSitemap();
+    });
+</script>
+
+</body>
+</html>
