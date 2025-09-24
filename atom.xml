@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+    <title>NIXYMINE - Download &amp; Enjoy</title>
+    <subtitle>Temukan dan unduh ribuan aplikasi dan game Android terbaru, aman, dan gratis di NIXYMINE.</subtitle>
+    <link href="https://nixymine.my.id/atom.xml" rel="self"/>
+    <link href="https://nixymine.my.id/"/>
+    <id>https://nixymine.my.id/</id>
+    <updated>2025-09-16T10:22:44Z</updated>
+    <author>
+        <name>NIXYMINE</name>
+    </author>
+    <icon>/favicon.ico</icon>
+    <logo>/navigasi.png</logo>
+
+    <entry>
+        <title>Tutorial v01</title>
+        <link href="https://nixymine.my.id/apps/tutorial-v01/"/>
+        <id>https://nixymine.my.id/apps/tutorial-v01/</id>
+        <updated>2025-09-16T10:22:44Z</updated>
+        <summary>Unduh aplikasi Tutorial v01. Kategori: Produktivitas, Versi: v01.</summary>
+    </entry>
+    <entry>
+        <title>Instant Mail v7.4.0</title>
+        <link href="https://nixymine.my.id/apps/instant-mail-v740-2/"/>
+        <id>https://nixymine.my.id/apps/instant-mail-v740-2/</id>
+        <updated>2025-09-16T10:22:44Z</updated>
+        <summary>Unduh aplikasi Instant Mail v7.4.0. Kategori: Produktivitas, Versi: v7.4.0.</summary>
+    </entry>
+    <entry>
+        <title>Auto Clicker - Super Fast v2.5.5</title>
+        <link href="https://nixymine.my.id/apps/auto-clicker---super-fast-v255/"/>
+        <id>https://nixymine.my.id/apps/auto-clicker---super-fast-v255/</id>
+        <updated>2025-09-16T10:22:44Z</updated>
+        <summary>Unduh aplikasi Auto Clicker - Super Fast v2.5.5. Kategori: Alat, Versi: v2.5.5.</summary>
+    </entry>
+    <entry>
+        <title>CamScanner v7.1.5.2508290000</title>
+        <link href="https://nixymine.my.id/apps/camscanner-v7152508290000/"/>
+        <id>https://nixymine.my.id/apps/camscanner-v7152508290000/</id>
+        <updated>2025-09-16T10:22:44Z</updated>
+        <summary>Unduh aplikasi CamScanner v7.1.5.2508290000. Kategori: Produktivitas, Versi: v7.1.5.2508290000.</summary>
+    </entry>
+    <entry>
+        <title>Office Reader v2.1.21</title>
+        <link href="https://nixymine.my.id/apps/office-reader-v2121/"/>
+        <id>https://nixymine.my.id/apps/office-reader-v2121/</id>
+        <updated>2025-09-16T10:22:44Z</updated>
+        <summary>Unduh aplikasi Office Reader v2.1.21. Kategori: Produktivitas, Versi: v2.1.21.</summary>
+    </entry>
+    <entry>
+        <title>ibis Paint X - v13.1.10</title>
+        <link href="https://nixymine.my.id/apps/ibis-paint-x---v13110/"/>
+        <id>https://nixymine.my.id/apps/ibis-paint-x---v13110/</id>
+        <updated>2025-09-16T10:22:44Z</updated>
+        <summary>Unduh aplikasi ibis Paint X - v13.1.10. Kategori: Alat, Versi: v13.1.10.</summary>
+    </entry>
+    <entry>
+        <title>Terabox v4.4.2</title>
+        <link href="https://nixymine.my.id/apps/terabox-v442/"/>
+        <id>https://nixymine.my.id/apps/terabox-v442/</id>
+        <updated>2025-09-16T10:22:44Z</updated>
+        <summary>Unduh aplikasi Terabox v4.4.2. Kategori: Alat, Versi: v4.4.2.</summary>
+    </entry>
+
+    <entry>
+        <title>Breaker Fun 2: Zombie Brick v2.9.1</title>
+        <link href="https://nixymine.my.id/games/breaker-fun-2-zombie-brick-v291/"/>
+        <id>https://nixymine.my.id/games/breaker-fun-2-zombie-brick-v291/</id>
+        <updated>2025-09-16T10:22:44Z</updated>
+        <summary>Unduh game Breaker Fun 2: Zombie Brick v2.9.1. Kategori: Aksi, Versi: v2.9.1.</summary>
+    </entry>
+    <entry>
+        <title>Dragon Kingdom: Fantasy City v1.8.0</title>
+        <link href="https://nixymine.my.id/games/dragon-kingdom-fantasy-city-v180/"/>
+        <id>https://nixymine.my.id/games/dragon-kingdom-fantasy-city-v180/</id>
+        <updated>2025-09-16T10:22:44Z</updated>
+        <summary>Unduh game Dragon Kingdom: Fantasy City v1.8.0. Kategori: Strategi, Versi: v1.8.0.</summary>
+    </entry>
+    <entry>
+        <title>Farm Supermarket Simulator v20</title>
+        <link href="https://nixymine.my.id/games/farm-supermarket-simulator-v20/"/>
+        <id>https://nixymine.my.id/games/farm-supermarket-simulator-v20/</id>
+        <updated>2025-09-16T10:22:44Z</updated>
+        <summary>Unduh game Farm Supermarket Simulator v20. Kategori: Strategi, Versi: v20.</summary>
+    </entry>
+
+    <entry>
+        <title>Revolusi AI: Bagaimana Kecerdasan Buatan Mengubah Hidup Kita Sehari-hari</title>
+        <link href="https://nixymine.my.id/blog/revolusi-ai-bagaimana-kecerdasan-buatan-mengubah-hidup-kita-sehari-hari.html"/>
+        <id>https://nixymine.my.id/blog/revolusi-ai-bagaimana-kecerdasan-buatan-mengubah-hidup-kita-sehari-hari.html</id>
+        <updated>2025-09-16T10:22:44Z</updated>
+        <summary>Baca artikel terbaru kami tentang bagaimana kecerdasan buatan telah merevolusi berbagai aspek kehidupan sehari-hari.</summary>
+    </entry>
+    <entry>
+        <title>Gebrakan AI Terbaru: Kecerdasan Buatan yang Mengubah Dunia</title>
+        <link href="https://nixymine.my.id/blog/gebrakan-ai-terbaru-kecerdasan-buatan-yang-mengubah-dunia.html"/>
+        <id>https://nixymine.my.id/blog/gebrakan-ai-terbaru-kecerdasan-buatan-yang-mengubah-dunia.html</id>
+        <updated>2025-09-16T10:22:44Z</updated>
+        <summary>Temukan gebrakan terbaru dalam teknologi AI dan bagaimana dampaknya mengubah dunia secara fundamental.</summary>
+    </entry>
+    <entry>
+        <title>Rahasia Terungkap! 10 Tips &amp; Trik Android Terbaru yang Wajib Anda Coba!</title>
+        <link href="https://nixymine.my.id/blog/rahasia-terungkap-10-tips-trik-android-terbaru-yang-wajib-anda-coba.html"/>
+        <id>https://nixymine.my.id/blog/rahasia-terungkap-10-tips-trik-android-terbaru-yang-wajib-anda-coba.html</id>
+        <updated>2025-09-16T10:22:44Z</updated>
+        <summary>Maksimalkan penggunaan perangkat Android Anda dengan 10 tips dan trik terbaru yang jarang diketahui banyak orang.</summary>
+    </entry>
+
+</feed>
