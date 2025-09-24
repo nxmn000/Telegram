@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - NIXYMINE</title>
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <meta name="description" content="Temukan jawaban atas pertanyaan yang sering diajukan mengenai NIXYMINE. Pelajari tentang keamanan, cara mengunduh, dan lainnya.">
+    <meta name="keywords" content="faq, pertanyaan, bantuan, download aplikasi, download game, apk android, NIXYMINE">
+    <meta name="author" content="NIXYMINE">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nixymine.my.id/faq.html">
+    <meta property="og:title" content="FAQ - NIXYMINE">
+    <meta property="og:description" content="Temukan jawaban atas pertanyaan yang sering diajukan mengenai NIXYMINE.">
+    <meta property="og:image" content="https://nixymine.my.id/banner.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://nixymine.my.id/faq.html">
+    <meta property="twitter:title" content="FAQ - NIXYMINE">
+    <meta property="twitter:description" content="Temukan jawaban atas pertanyaan yang sering diajukan mengenai NIXYMINE.">
+    <meta property="twitter:image" content="https://nixymine.my.id/banner.jpg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Apakah aman mengunduh file dari NIXYMINE?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ya. Kami memastikan setiap file yang diunggah dipindai untuk virus dan malware sebelum tersedia untuk umum. Keamanan pengguna adalah prioritas utama kami."
+        }
+      },{
+        "@type": "Question",
+        "name": "Apakah semua aplikasi dan game di sini gratis?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Benar. Semua file APK yang tersedia di NIXYMINE dapat diunduh dan digunakan sepenuhnya secara gratis."
+        }
+      },{
+        "@type": "Question",
+        "name": "Bagaimana cara menginstal file APK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Untuk menginstal file APK, Anda perlu mengizinkan instalasi dari 'Sumber Tidak Dikenal' di pengaturan keamanan Android Anda. Setelah diizinkan, cukup buka file APK yang telah diunduh untuk memulai proses instalasi."
+        }
+      }]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        :root {
+            --bg-color: #f0f2f5;
+            --text-color: #2c3e50;
+            --text-color-light: #6c757d;
+            --card-bg: #ffffff;
+            --header-bg: #ffffff;
+            --shadow-color: rgba(0, 0, 0, 0.08);
+            --border-color: #e9e9e9;
+            --blue-color: #007bff; 
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        body.dark-mode {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --text-color-light: #a0a0a0;
+            --card-bg: #1e1e1e;
+            --header-bg: #1e1e1e;
+            --shadow-color: rgba(0, 0, 0, 0.4);
+            --border-color: #333;
+        }
+        
+        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px 15px; }
+
+        /* Header */
+        header {
+            background-color: var(--header-bg);
+            box-shadow: 0 2px 4px var(--shadow-color);
+            padding: 10px 15px;
+            display: flex; justify-content: space-between; align-items: center;
+            position: sticky; top: 0; z-index: 998;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .header-logo img {
+            height: 30px;
+            display: block;
+        }
+        .header-btn {
+            background: none; border: none;
+            font-size: 1.4em;
+            color: var(--text-color-light);
+            cursor: pointer;
+            padding: 5px;
+        }
+        .header-btn:hover { color: var(--text-color); }
+
+        /* Overlay */
+        .overlay {
+            position: fixed; top: 0; left: 0;
+            width: 100%; height: 100vh;
+            background-color: var(--bg-color);
+            z-index: 1000;
+            opacity: 0; visibility: hidden;
+            transition: var(--transition-smooth);
+            overflow-y: auto;
+        }
+        .overlay.active { opacity: 1; visibility: visible; }
+        
+        /* Menu Overlay */
+        #menu-overlay { transform: translateX(-100%); }
+        #menu-overlay.active { transform: translateX(0); }
+        .overlay-header { display: flex; align-items: center; padding: 15px; border-bottom: 1px solid var(--border-color); }
+        .overlay-header .logo-full { 
+            height: 35px;
+            display: block;
+            margin-left: 5px;
+        }
+        .overlay-close-btn { font-size: 1.8em; margin-left: auto; color: var(--text-color-light); background: none; border: none; cursor: pointer; padding: 5px;}
+        .overlay-close-btn:hover { color: var(--text-color); }
+
+        .menu-search-box { padding: 15px; }
+        .menu-search-box input {
+            width: 100%; padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px; font-size: 1em;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+        .menu-search-box input:focus { outline: none; }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            padding: 0 15px;
+            margin-top: 15px;
+        }
+        .menu-grid-item {
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            padding: 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: white; /* Default text color for grid items */
+            font-weight: 600;
+            gap: 10px;
+            cursor: pointer;
+            border: none;
+            font-size: 1em;
+            transition: transform 0.2s;
+        }
+        .menu-grid-item:hover { transform: translateY(-3px); }
+        .menu-grid-item i { font-size: 2em; }
+        .menu-grid-item.home { background-color: var(--blue-color); }
+        /* Perbaikan: Tambahkan warna latar belakang dan teks putih untuk Dark Mode */
+        .menu-grid-item.dark-mode { 
+            background-color: #343a40; /* Contoh warna abu-abu gelap */
+            color: white; /* Pastikan teks putih */
+        } 
+        .menu-grid-item.telegram-bg { background-color: #0088cc; }
+        .menu-grid-item.whatsapp-bg { background-color: #25D366; }
+
+        /* Search Overlay */
+        #search-overlay { transform: translateY(-100%); }
+        #search-overlay.active { transform: translateY(0); }
+        #search-overlay .overlay-header { border-bottom: none; }
+        #search-overlay .search-input-wrapper { 
+            display: flex; align-items: center; 
+            background-color: var(--card-bg);
+            border-radius: 50px;
+            padding: 8px 15px;
+            flex-grow: 1; 
+            margin-right: 15px;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+        #search-overlay .search-input-wrapper i {
+            font-size: 1.2em;
+            color: var(--text-color-light); 
+            margin-right: 10px;
+        }
+        #search-overlay input {
+            width: 100%; border: none; background: none;
+            font-size: 1em; padding: 0;
+            color: var(--text-color);
+        }
+        #search-overlay input:focus { outline: none; }
+
+        /* Konten Utama */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 0;
+        }
+        .section-title-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-icon {
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e9f0f7;
+            border-radius: 50%;
+            color: #4f8cd1;
+            font-size: 1.2em;
+        }
+        .section-header h2 {
+            font-size: 1.4em;
+            color: var(--text-color);
+        }
+
+        /* FAQ Styling */
+        .faq-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .faq-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px var(--shadow-color);
+            transition: var(--transition-smooth);
+        }
+        .faq-item[open] {
+            box-shadow: 0 6px 16px var(--shadow-color);
+        }
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none; /* Hide default marker */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-color);
+        }
+        .faq-question::-webkit-details-marker {
+             display: none; /* Hide default marker for Chrome/Safari */
+        }
+        .faq-question::after {
+            content: '\f078'; /* Font Awesome chevron-down */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            transition: transform 0.3s;
+        }
+        .faq-item[open] > .faq-question::after {
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            padding: 0 20px 20px 20px;
+            color: var(--text-color-light);
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer-container {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 12px var(--shadow-color);
+            margin-top: 50px;
+        }
+        .footer-links-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .footer-link {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 8px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 0.8em;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+        }
+        .footer-link:hover {
+            background-color: var(--blue-color);
+            color: white;
+        }
+        .footer-social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 20px 0;
+            border-top: 1px solid var(--border-color);
+        }
+        .footer-social-icons a {
+            color: var(--text-color-light);
+            font-size: 1.5em;
+            transition: var(--transition-smooth);
+        }
+        .footer-social-icons a:hover {
+            color: var(--blue-color);
+            transform: scale(1.1);
+        }
+        .footer-copyright {
+            text-align: center;
+            font-size: 0.8em;
+            color: var(--text-color-light);
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+        }
+
+    </style>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ECNJ19YTE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4ECNJ19YTE');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5990225871890476"
+         crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <button id="menu-toggle" class="header-btn" aria-label="Buka Menu"><i class="fa-solid fa-bars"></i></button>
+            <div class="header-logo">
+                <a href="index.html"><img src="navigasi.png" alt="NIXY MINE"></a>
+            </div>
+        </div>
+        <button id="search-toggle" class="header-btn" aria-label="Buka Pencarian"><i class="fa-solid fa-search"></i></button>
+    </header>
+
+    <div id="menu-overlay" class="overlay">
+        <div class="overlay-header">
+            <img src="navigasi.png" alt="NIXY MINE" class="logo-full">
+            <button id="menu-close" class="overlay-close-btn" aria-label="Tutup Menu"><i class="fa-solid fa-times"></i></button>
+        </div>
+        <div class="menu-search-box">
+            <input type="search" id="menu-search-input" placeholder="Cari aplikasi, game...">
+        </div>
+        <div class="menu-grid">
+            <a href="index.html" class="menu-grid-item home"><i class="fa-solid fa-home"></i><span>Home</span></a>
+            <button id="dark-mode-toggle" class="menu-grid-item dark-mode">
+                <i class="fa-solid fa-moon"></i><span>Dark Mode</span>
+            </button>
+            <a href="https://t.me/+JZVMFir6yM0yZmY1" class="menu-grid-item telegram-bg">
+                <i class="fab fa-telegram-plane"></i>
+                <span>Telegram</span>
+            </a>
+            <a href="https://whatsapp.com/channel/0029Vb6hiBj8vd1VtNSWws2z" class="menu-grid-item whatsapp-bg">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+        </div>
+    </div>
+
+    <div id="search-overlay" class="overlay">
+        <div class="overlay-header">
+            <div class="search-input-wrapper">
+                <i class="fa-solid fa-search"></i>
+                <input type="search" id="search-input" placeholder="Pencarian dialihkan ke halaman utama...">
+            </div>
+            <button id="search-close" class="overlay-close-btn" aria-label="Tutup Pencarian"><i class="fa-solid fa-times"></i></button>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title-group">
+                    <span class="section-icon"><i class="fa fa-question-circle"></i></span>
+                    <h2>Frequently Asked Questions (FAQ)</h2>
+                </div>
+            </div>
+            
+            <div class="faq-container">
+                <details class="faq-item">
+                    <summary class="faq-question">Apakah aman mengunduh file dari NIXYMINE?</summary>
+                    <div class="faq-answer">
+                        <p>Ya, tentu saja. Keamanan Anda adalah prioritas kami. Setiap file yang kami sediakan telah dipindai dengan beberapa antivirus untuk memastikan bebas dari virus dan malware. Kami berkomitmen untuk menyediakan lingkungan unduhan yang aman.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">Apakah semua aplikasi dan game di sini gratis?</summary>
+                    <div class="faq-answer">
+                        <p>Benar. Semua aplikasi dan game yang tersedia di NIXYMINE dapat diunduh dan digunakan sepenuhnya secara gratis. Kami tidak memungut biaya apapun.</p>
+                    </div>
+                </details>
+                
+                <details class="faq-item">
+                    <summary class="faq-question">Bagaimana cara menginstal file .APK?</summary>
+                    <div class="faq-answer">
+                        <p>Untuk menginstal file APK dari luar Play Store, Anda perlu melakukan langkah-langkah berikut:</p>
+                        <ol>
+                            <li>Unduh file APK yang Anda inginkan.</li>
+                            <li>Buka <strong>Pengaturan</strong> (Settings) di perangkat Android Anda.</li>
+                            <li>Pergi ke menu <strong>Keamanan</strong> (Security) atau <strong>Privasi</strong> (Privacy).</li>
+                            <li>Cari dan aktifkan opsi <strong>"Sumber Tidak Dikenal"</strong> (Unknown Sources).</li>
+                            <li>Buka file manager Anda, temukan file APK yang sudah diunduh, dan ketuk untuk menginstalnya.</li>
+                        </ol>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">Mengapa saya perlu mengaktifkan "Sumber Tidak Dikenal"?</summary>
+                    <div class="faq-answer">
+                        <p>Secara default, Android hanya mengizinkan instalasi aplikasi dari Google Play Store untuk alasan keamanan. Mengaktifkan "Sumber Tidak Dikenal" memungkinkan Anda menginstal aplikasi dari sumber lain, seperti file APK yang Anda unduh dari NIXYMINE.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">Apa yang harus saya lakukan jika link unduhan rusak?</summary>
+                    <div class="faq-answer">
+                        <p>Kami secara rutin memeriksa semua tautan unduhan. Namun, jika Anda menemukan tautan yang rusak atau tidak berfungsi, mohon segera laporkan kepada kami melalui halaman <a href="contact.html" style="color: var(--blue-color);">Kontak</a> atau bergabunglah dengan grup Telegram kami. Kami akan memperbaikinya sesegera mungkin.</p>
+                    </div>
+                </details>
+                
+                <details class="faq-item">
+                    <summary class="faq-question">Bolehkah saya meminta aplikasi atau game tertentu?</summary>
+                    <div class="faq-answer">
+                        <p>Tentu! Kami senang menerima permintaan dari pengguna. Anda dapat mengirimkan permintaan Anda melalui grup Telegram atau WhatsApp kami. Kami akan berusaha sebaik mungkin untuk menyediakan aplikasi atau game yang Anda inginkan.</p>
+                    </div>
+                </details>
+            </div>
+
+            <footer class="footer-container">
+                <div class="section-header">
+               <div class="section-title-group">
+               <span class="section-icon" style="background-color: #e9ecef; color: #6c757d;"><i class="fa fa-question-circle"></i></span>
+                <h2>NIXY MINE - About Us</h2>
+                </div>
+                </div>
+                <div class="footer-links-grid">
+                    <a href="privacy-policy.html" class="footer-link">Privacy</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                    <a href="terms.html" class="footer-link">Terms</a>
+                    <a href="disclaimer.html" class="footer-link">Disclaimer</a>
+                    <a href="dmca.html" class="footer-link">DMCA</a>
+                    <a href="sitemap.html" class="footer-link">Sitemap</a>
+                    <a href="cookie-policy.html" class="footer-link">Cookie</a>
+                </div>
+                <div class="footer-social-icons">
+                    <a href="https://t.me/+JZVMFir6yM0yZmY1" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="/" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    <a href="/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="/" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="footer-copyright">
+                    All Right Reserved Copyright &copy; 2025
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // --- Elemen UI ---
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuOverlay = document.getElementById('menu-overlay');
+        const menuClose = document.getElementById('menu-close');
+        const searchToggle = document.getElementById('search-toggle');
+        const searchOverlay = document.getElementById('search-overlay');
+        const searchClose = document.getElementById('search-close');
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const darkModeIcon = darkModeToggle.querySelector('i');
+        const mainSearchInput = document.getElementById('search-input');
+        const menuSearchInput = document.getElementById('menu-search-input');
+
+        const toggleOverlay = (overlay, isActive) => {
+            overlay.classList.toggle('active', isActive);
+            document.body.style.overflow = isActive ? 'hidden' : '';
+        };
+
+        menuToggle.addEventListener('click', () => toggleOverlay(menuOverlay, true));
+        menuClose.addEventListener('click', () => toggleOverlay(menuOverlay, false));
+        searchToggle.addEventListener('click', () => {
+            toggleOverlay(searchOverlay, true);
+            mainSearchInput.focus();
+        });
+        searchClose.addEventListener('click', () => toggleOverlay(searchOverlay, false));
+
+        const applyTheme = (theme) => {
+            document.body.classList.toggle('dark-mode', theme === 'dark');
+            darkModeIcon.className = theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+        };
+
+        let currentTheme = localStorage.getItem('theme') || 'light';
+        applyTheme(currentTheme);
+
+        darkModeToggle.addEventListener('click', () => {
+            currentTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+            applyTheme(currentTheme);
+            localStorage.setItem('theme', currentTheme);
+        });
+
+        // Redirect search to home page
+        const redirectToSearch = (query) => {
+            if (query.trim()) {
+                window.location.href = `index.html?s=${encodeURIComponent(query.trim())}`;
+            }
+        };
+        
+        const handleSearchEvent = (event) => {
+            if (event.key === 'Enter') {
+                redirectToSearch(event.target.value);
+            }
+        };
+
+        mainSearchInput.addEventListener('keypress', handleSearchEvent);
+        menuSearchInput.addEventListener('keypress', handleSearchEvent);
+    });
+    </script>
+</body>
+</html>
