@@ -1,0 +1,209 @@
+:root {
+    --bg-color: #f0f2f5;
+    --text-color: #2c3e50;
+    --text-color-light: #6c757d;
+    --header-bg: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+    --border-color: #e9e9e9;
+    --blue-color: #007bff;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --text-color-light: #a0a0a0;
+    --header-bg: #1e1e1e;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --border-color: #333;
+}
+
+html { scroll-behavior: smooth; }
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container { max-width: 800px; margin: 0 auto; padding: 20px 15px; }
+
+header {
+    background-color: var(--header-bg);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-logo img {
+    height: 30px;
+    display: block;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 1em;
+    color: var(--text-color);
+    font-weight: 600;
+}
+.back-button:hover {
+    color: var(--blue-color);
+}
+
+.article-container {
+    margin-top: 20px;
+}
+
+.article-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+}
+.article-header h1 {
+    font-size: 2em;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.article-nixy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--border-color); /* Ini sudah ada */
+    margin-bottom: 25px; /* Ini sudah ada */
+    padding-bottom: 15px; /* Ini sudah ada */
+
+    /* Tambahan atau penyesuaian yang mungkin hilang: */
+    padding-top: 20px; /* Sesuaikan nilainya */
+    margin-top: 20px; /* Sesuaikan nilainya agar ada jarak dari share button */
+    background-color: var(--card-background-color, #fff); /* Jika ada background */
+    border-top: 1px solid var(--border-color); /* Jika ada border atas juga */
+    /* Anda juga bisa menambahkan padding-left dan padding-right jika div ini lebih kecil dari header */
+    padding-left: 15px; /* Contoh */
+    padding-right: 15px; /* Contoh */
+}
+
+.article-nixy h1 {
+    font-size: 2em;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+.article-meta {
+    font-size: 0.9em;
+    color: var(--text-color-light);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.article-meta span {
+    display: flex;
+    align-items: center;
+}
+.article-meta i {
+    margin-right: 8px;
+    width: 15px;
+    text-align: center;
+}
+
+.article-share {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+.article-share h3 {
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.article-share-icons a {
+    color: var(--text-color-light);
+    font-size: 1.4em;
+    margin-left: 10px;
+    transition: color 0.2s;
+}
+.article-share-icons a:hover {
+    color: var(--blue-color);
+}
+
+.article-body p {
+    margin-bottom: 1.5em;
+    font-size: 1.1em;
+}
+.article-body h2 {
+    font-size: 1.5em;
+    margin-top: 1.8em;
+    margin-bottom: 1em;
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 0.8em;
+    color: var(--text-color-light);
+    padding-top: 25px;
+    border-top: 1px solid var(--border-color);
+    margin-top: 40px;
+}
+/* Aturan baru untuk memperbaiki tampilan daftar */
+.article-body ol,
+.article-body ul {
+    padding-left: 25px;
+    margin-bottom: 1.5em;
+}
+
+.article-body li {
+    margin-bottom: 0.8em;
+}
+/* Styling untuk Link Footer agar Rapi */
+.footer-links {
+    display: flex; /* Membuat link sejajar secara horizontal */
+    flex-wrap: wrap; /* Memastikan link turun ke bawah jika tidak muat */
+    justify-content: center; /* Membuat semua link berada di tengah */
+    gap: 10px 20px; /* Memberi jarak atas/bawah 10px dan kiri/kanan 20px */
+    margin-top: 30px; /* Memberi jarak dari konten di atasnya */
+    padding-top: 20px; /* Memberi jarak di dalam kotak */
+    border-top: 1px solid #eeeeee; /* Memberi garis pemisah tipis */
+}
+
+.footer-links a {
+    color: #555; /* Mengubah warna link menjadi abu-abu gelap */
+    text-decoration: none; /* Menghilangkan garis bawah */
+    font-size: 14px; /* Sedikit memperkecil ukuran font */
+    transition: color 0.2s ease; /* Efek transisi saat disentuh */
+}
+
+.footer-links a:hover {
+    color: #007bff; /* Mengubah warna link saat kursor di atasnya */
+    text-decoration: underline; /* Memunculkan garis bawah saat kursor di atasnya */
+}
