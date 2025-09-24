@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="id"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIXYMINE - Download &amp; Enjoy</title>
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <meta name="description" content="Temukan dan unduh ribuan aplikasi dan game Android terbaru, aman, dan gratis di NIXYMINE.">
+    <meta name="keywords" content="download aplikasi, download game, apk android, aplikasi gratis, game terbaru, NIXYMINE">
+    <meta name="author" content="NIXYMINE">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nixymine.my.id/">
+    <meta property="og:title" content="NIXYMINE - Download &amp; Enjoy">
+    <meta property="og:description" content="Portal terbaik untuk mencari dan mengunduh aplikasi dan game Android terbaru.">
+    <meta property="og:image" content="https://nixymine.my.id/banner.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://nixymine.my.id/">
+    <meta property="twitter:title" content="NIXYMINE - Download &amp; Enjoy">
+    <meta property="twitter:description" content="Portal terbaik untuk mencari dan mengunduh aplikasi dan game Android terbaru.">
+    <meta property="twitter:image" content="https://nixymine.my.id/banner.jpg">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "NIXYMINE",
+  "url": "https://nixymine.my.id/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://nixymine.my.id/?s={search_term_string}"
+    },
+    "query-input": {
+      "@type": "PropertyValueSpecification",
+      "valueRequired": "http://schema.org/True",
+      "valueName": "search_term_string"
+    }
+  },
+  "mainEntity": {
+    "@type": "WebPage",
+    "hasPart": [
+      {"@type": "SiteNavigationElement", "name": "Apps", "url": "https://nixymine.my.id/apps/"},
+      {"@type": "SiteNavigationElement", "name": "Games", "url": "https://nixymine.my.id/games/"},
+      {"@type": "SiteNavigationElement", "name": "Blog", "url": "https://nixymine.my.id/blog/"}
+    ]
+  }
+}
+</script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <style>
+        :root {
+            --bg-color: #f0f2f5;
+            --text-color: #2c3e50;
+            --text-color-light: #6c757d;
+            --card-bg: #ffffff;
+            --header-bg: #ffffff;
+            --shadow-color: rgba(0, 0, 0, 0.08);
+            --border-color: #e9e9e9;
+            --green-color: #28a745; 
+            --green-light-bg: #e9f6ec; 
+            --blue-color: #007bff; 
+            --red-color: #dc3545; 
+            --purple-color: #6f42c1; 
+            --yellow-color: #ffc107; 
+            --teal-color: #20c997; 
+            --orange-color: #fd7e14; 
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        body.dark-mode {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --text-color-light: #a0a0a0;
+            --card-bg: #1e1e1e;
+            --header-bg: #1e1e1e;
+            --shadow-color: rgba(0, 0, 0, 0.4);
+            --border-color: #333;
+            --green-light-bg: #2c3e50;
+        }
+        
+        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px 15px; }
+
+        /* Header */
+        header {
+            background-color: var(--header-bg);
+            box-shadow: 0 2px 4px var(--shadow-color);
+            padding: 10px 15px;
+            display: flex; justify-content: space-between; align-items: center;
+            position: sticky; top: 0; z-index: 998;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .header-logo img {
+            height: 30px;
+            display: block;
+        }
+        .header-btn {
+            background: none; border: none;
+            font-size: 1.4em;
+            color: var(--text-color-light);
+            cursor: pointer;
+            padding: 5px;
+        }
+        .header-btn:hover { color: var(--text-color); }
+
+        /* Overlay */
+        .overlay {
+            position: fixed; top: 0; left: 0;
+            width: 100%; height: 100vh;
+            background-color: var(--bg-color);
+            z-index: 1000;
+            opacity: 0; visibility: hidden;
+            transition: var(--transition-smooth);
+            overflow-y: auto;
+        }
+        .overlay.active { opacity: 1; visibility: visible; }
+        
+        /* Menu Overlay */
+        #menu-overlay { transform: translateX(-100%); }
+        #menu-overlay.active { transform: translateX(0); }
+        .overlay-header { display: flex; align-items: center; padding: 15px; border-bottom: 1px solid var(--border-color); }
+        .overlay-header .logo-full { 
+            height: 35px;
+            display: block;
+            margin-left: 5px;
+        }
+        .overlay-close-btn { font-size: 1.8em; margin-left: auto; color: var(--text-color-light); background: none; border: none; cursor: pointer; padding: 5px;}
+        .overlay-close-btn:hover { color: var(--text-color); }
+
+        .menu-search-box { padding: 15px; }
+        .menu-search-box input {
+            width: 100%; padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px; font-size: 1em;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            padding: 0 15px;
+            margin-top: 15px;
+        }
+        .menu-grid-item {
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            padding: 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            gap: 10px;
+            cursor: pointer;
+            border: none;
+            font-size: 1em;
+            transition: transform 0.2s;
+        }
+        .menu-grid-item:hover { transform: translateY(-3px); }
+        .menu-grid-item i { font-size: 2em; }
+        .menu-grid-item.home { background-color: var(--blue-color); }
+        .menu-grid-item.games { background-color: var(--red-color); }
+        .menu-grid-item.apps { background-color: var(--purple-color); }
+        .menu-grid-item.blog { background-color: var(--yellow-color); color: white; }
+        .menu-grid-item.faq { background-color: var(--teal-color); }
+        .menu-grid-item.dark-mode { background-color: var(--orange-color); }
+        .menu-grid-item.telegram-bg { background-color: #0088cc; }
+        .menu-grid-item.whatsapp-bg { background-color: #25D366; }
+
+        /* Search Overlay */
+        #search-overlay { transform: translateY(-100%); }
+        #search-overlay.active { transform: translateY(0); }
+        #search-overlay .overlay-header { border-bottom: none; }
+        #search-overlay .search-input-wrapper { 
+            display: flex; align-items: center; 
+            background-color: var(--card-bg);
+            border-radius: 50px;
+            padding: 8px 15px;
+            flex-grow: 1; 
+            margin-right: 15px;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+        #search-overlay .search-input-wrapper i {
+            font-size: 1.2em;
+            color: var(--text-color-light); 
+            margin-right: 10px;
+        }
+        #search-overlay input {
+            width: 100%; border: none; background: none;
+            font-size: 1em; padding: 0;
+            color: var(--text-color);
+        }
+        #search-overlay input::placeholder {
+            color: var(--text-color-light);
+            opacity: 0.7;
+        }
+        #search-overlay input:focus { outline: none; }
+
+        .search-content { padding: 15px; }
+        .search-content h3 { margin-bottom: 10px; color: var(--text-color-light); font-size: 1em; }
+        #recent-searches-list { list-style: none; }
+        #recent-searches-list li { 
+            padding: 10px 0; border-bottom: 1px solid var(--border-color); 
+            cursor: pointer; color: var(--text-color);
+            transition: color 0.2s;
+        }
+        #recent-searches-list li:hover { color: var(--blue-color); }
+
+        /* Banner */
+        .banner-container {
+            margin-bottom: 25px;
+        }
+        .banner-container img {
+            width: 100%;
+            display: block;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px var(--shadow-color);
+        }
+
+        /* Konten Utama */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 0;
+            scroll-margin-top: 70px; 
+        }
+        .app-list + .section-header,
+        .categories-wrapper + .footer-container { /* Jarak antar section besar */
+             margin-top: 50px;
+        }
+        .section-title-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-icon {
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f7e6e5;
+            border-radius: 50%;
+            color: #d1564f;
+            font-size: 1.2em;
+        }
+        .section-header h2 {
+            font-size: 1.4em;
+            color: var(--text-color);
+        }
+        .view-all-btn {
+            background-color: var(--green-color);
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: background-color 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+        .view-all-btn:hover { background-color: #218838; }
+
+        .app-list { display: grid; gap: 15px; }
+        .app-card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 12px;
+            box-shadow: 0 4px 12px var(--shadow-color);
+            display: flex;
+            gap: 15px;
+            transition: var(--transition-smooth);
+            align-items: flex-start;
+            text-decoration: none;
+            opacity: 0;
+        }
+        .app-card:hover { transform: translateY(-3px); box-shadow: 0 6px 16px var(--shadow-color); }
+        
+        .card-image-container {
+            position: relative;
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+        }
+        .card-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+        }
+        .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .card-title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .card-title-row h3 {
+            font-size: 1.05em;
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.3;
+            color: var(--text-color);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 180px;
+        }
+        .updated-tag {
+            display: none; 
+        }
+        .card-details {
+            font-size: 0.8em;
+            color: var(--text-color-light);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            line-height: 1.4;
+        }
+        .card-details span strong::after {
+            content: ":";
+            margin-left: 2px;
+        }
+
+        :not(.results-list).app-list .app-card:nth-child(n + 6) {
+            display: none;
+        }
+        .app-list.show-all .app-card {
+            display: flex !important;
+        }
+
+        .results-list .app-card:nth-child(n + 101) {
+            display: none;
+        }
+        
+        .blog-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .blog-post-item {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 12px var(--shadow-color);
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            font-size: 1em;
+            transition: var(--transition-smooth);
+            display: block; 
+        }
+        .blog-post-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px var(--shadow-color);
+            color: var(--blue-color);
+        }
+
+        .blog-list:not(.show-all) .blog-post-item:nth-child(n + 6) {
+            display: none;
+        }
+
+        .blog-list.show-all .blog-post-item {
+            display: block !important;
+        }
+
+
+        .categories-wrapper {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 12px var(--shadow-color);
+            margin-top: 50px;
+        }
+        .category-grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            gap: 10px;
+        }
+        .category-button {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 8px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.8em;
+            font-weight: 500;
+            box-shadow: none;
+            border: 1px solid var(--border-color);
+            transition: var(--transition-smooth);
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .category-button:hover {
+            background-color: var(--blue-color);
+            color: white;
+            border-color: var(--blue-color);
+            transform: translateY(-2px);
+        }
+
+        .footer-container {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 12px var(--shadow-color);
+        }
+        .footer-links-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .footer-link {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 8px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 0.8em;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .footer-link:hover {
+            background-color: var(--blue-color);
+            color: white;
+        }
+        .footer-social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 20px 0;
+            border-top: 1px solid var(--border-color);
+        }
+        .footer-social-icons a {
+            color: var(--text-color-light);
+            font-size: 1.5em;
+            transition: var(--transition-smooth);
+        }
+        .footer-social-icons a:hover {
+            color: var(--blue-color);
+            transform: scale(1.1);
+        }
+        .footer-copyright {
+            text-align: center;
+            font-size: 0.8em;
+            color: var(--text-color-light);
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .card-anim {
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+         body {
+            padding-top: 0 !important;
+        }
+
+        header {
+            top: var(--anchor-ad-top-offset, 0px);
+        }
+        .card-details strong i {
+            margin-right: 5px;
+        }
+
+    </style>
+    
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4ECNJ19YTE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4ECNJ19YTE');
+</script>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5990225871890476" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <button id="menu-toggle" class="header-btn" aria-label="Buka Menu"><i class="fa-solid fa-bars"></i></button>
+            <div class="header-logo">
+                <a href="/"><img src="navigasi.png" alt="NIXY MINE"></a>
+            </div>
+        </div>
+        <button id="search-toggle" class="header-btn" aria-label="Buka Pencarian"><i class="fa-solid fa-search"></i></button>
+    </header>
+
+    <div id="menu-overlay" class="overlay">
+        <div class="overlay-header">
+            <img src="navigasi.png" alt="NIXY MINE" class="logo-full">
+            <button id="menu-close" class="overlay-close-btn" aria-label="Tutup Menu"><i class="fa-solid fa-times"></i></button>
+        </div>
+        <div class="menu-search-box">
+            <input type="search" id="menu-search-input" placeholder="Cari aplikasi, game...">
+        </div>
+        <div class="menu-grid">
+            <a href="/" class="menu-grid-item home"><i class="fa-solid fa-home"></i><span>Home</span></a>
+            <a href="https://nixymine.my.id/games/" class="menu-grid-item games"><i class="fa-solid fa-gamepad"></i><span>Games</span></a>
+            <a href="https://nixymine.my.id/apps/" class="menu-grid-item apps"><i class="fa-solid fa-th-large"></i><span>Apps</span></a>
+            <a href="https://nixymine.my.id/blog/" class="menu-grid-item blog"><i class="fa-solid fa-file-alt"></i><span>Blog</span></a>
+            <a href="/faq.html" class="menu-grid-item faq"><i class="fa fa-question-circle"></i><span>FAQ</span></a>
+            <button id="dark-mode-toggle" class="menu-grid-item dark-mode">
+                <i class="fa-solid fa-moon"></i><span>Dark Mode</span> </button>
+                <a href="https://t.me/+JZVMFir6yM0yZmY1" class="menu-grid-item telegram-bg">
+    <i class="fab fa-telegram-plane"></i>
+    <span>Telegram</span>
+</a>
+<a href="https://whatsapp.com/channel/0029Vb6hiBj8vd1VtNSWws2z" class="menu-grid-item whatsapp-bg">
+    <i class="fab fa-whatsapp"></i>
+    <span>WhatsApp</span>
+</a>
+        </div>
+    </div>
+
+    <div id="search-overlay" class="overlay">
+        <div class="overlay-header">
+            <div class="search-input-wrapper">
+                <i class="fa-solid fa-search"></i>
+                <input type="search" id="search-input" placeholder="Cari aplikasi, game, dan lainnya">
+            </div>
+            <button id="search-close" class="overlay-close-btn" aria-label="Tutup Pencarian"><i class="fa-solid fa-times"></i></button>
+        </div>
+        <div class="search-content">
+            <h3>Pencarian Terakhir</h3>
+            <ul id="recent-searches-list">
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <div id="dynamic-content-wrapper">
+                <div id="home-content">
+                    <div class="banner-container">
+                        <img src="banner.jpg" alt="NIXY MINE">
+                    </div>
+                    <div class="section-header" id="new-update-section">
+                        <div class="section-title-group">
+                            <span class="section-icon" style="background-color: #f7f2e5; color: #d1b84f;"><i class="fa-solid fa-star"></i></span>
+                            <h2>New Update</h2>
+                        </div>
+                    </div>
+                    <div class="app-list" id="new-update-list"></div>
+                    <div class="section-header" id="apps-section">
+                        <div class="section-title-group">
+                            <span class="section-icon" style="background-color: #e7e5f7; color: #564fd1;"><i class="fa-solid fa-th-large"></i></span>
+                            <h2>Update Apps</h2>
+                        </div>
+                        <button class="view-all-btn">View All &gt;</button>
+                    </div>
+                    <div class="app-list" id="update-apps-list">
+                        <a href="apps/vpn-promaster-v42869/" class="app-card" data-title="APPS"><div class="card-image-container"><img src="https://nixymine.my.id/apps/vpn-promaster-v42869/icon.webp" alt="VPN ProMaster v4.2.869"></div><div class="card-content"><div class="card-title-row"><h3>VPN ProMaster v4.2.869</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v4.2.869</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Tools</span></div></div></a>
+                        <a href="apps/capcut---video-editor-v1520/" class="app-card" data-title="APPS"><div class="card-image-container"><img src="https://nixymine.my.id/apps/capcut---video-editor-v1520/icon.png" alt="CapCut - Video Editor v15.2.0"></div><div class="card-content"><div class="card-title-row"><h3>CapCut - Video Editor v15.2.0</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v15.2.0</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Video Players</span></div></div></a>
+                        <a href="apps/lightroom-photo--video-editor-v1053/" class="app-card" data-title="APPS"><div class="card-image-container"><img src="https://nixymine.my.id/apps/lightroom-photo--video-editor-v1053/icon.png" alt="Lightroom Photo &amp; Video Editor v10.5.3"></div><div class="card-content"><div class="card-title-row"><h3>Lightroom Photo &amp; Video Editor v10.5.3</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v10.5.3</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Photography</span></div></div></a>
+                        <a href="apps/terabox-1tb-cloud--ai-space-v453/" class="app-card" data-title="APPS"><div class="card-image-container"><img src="https://nixymine.my.id/apps/terabox-1tb-cloud--ai-space-v453/icon.png" alt="TeraBox: 1TB Cloud &amp; AI Space v4.5.3"></div><div class="card-content"><div class="card-title-row"><h3>TeraBox: 1TB Cloud &amp; AI Space v4.5.3</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v4.5.3</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Productivity</span></div></div></a>
+                        <a href="apps/instant-mail-v740-2/" class="app-card" data-title="APPS"><div class="card-image-container"><img src="https://nixymine.my.id/apps/instant-mail-v740-2/icon.webp" alt="Instant Mail v7.4.0"></div><div class="card-content"><div class="card-title-row"><h3>Instant Mail v7.4.0</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v7.4.0</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Produktivitas</span></div></div></a>
+                        <a href="apps/auto-clicker---super-fast-v255/" class="app-card" data-title="APPS"><div class="card-image-container"><img src="https://nixymine.my.id/apps/auto-clicker---super-fast-v255/icon.webp" alt="Auto Clicker - Super Fast v2.5.5"></div><div class="card-content"><div class="card-title-row"><h3>Auto Clicker - Super Fast v2.5.5</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v2.5.5</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Alat</span></div></div></a>
+                        <a href="apps/camscanner-v7152508290000/" class="app-card" data-title="APPS"><div class="card-image-container"><img src="https://nixymine.my.id/apps/camscanner-v7152508290000/icon.png" alt="CamScanner v7.1.5.2508290000"></div><div class="card-content"><div class="card-title-row"><h3>CamScanner v7.1.5.2508290000</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v7.1.5.2508290000</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Produktivitas</span></div></div></a>
+                        <a href="apps/office-reader-v2121/" class="app-card" data-title="APPS"><div class="card-image-container"><img src="https://nixymine.my.id/apps/office-reader-v2121/icon.jpg" alt="Office Reader v2.1.21"></div><div class="card-content"><div class="card-title-row"><h3>Office Reader v2.1.21</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v2.1.21</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Produktivitas</span></div></div></a>
+                        <a href="apps/ibis-paint-x---v13110/" class="app-card" data-title="APPS"><div class="card-image-container"><img src="https://nixymine.my.id/apps/ibis-paint-x---v13110/icon.png" alt="ibis Paint X - v13.1.10"></div><div class="card-content"><div class="card-title-row"><h3>ibis Paint X - v13.1.10</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v13.1.10</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Alat</span></div></div></a>
+                        <a href="apps/terabox-v442/" class="app-card" data-title="APPS"><div class="card-image-container"><img src="https://nixymine.my.id/apps/terabox-v442/icon.png" alt="Terabox v4.4.2"></div><div class="card-content"><div class="card-title-row"><h3>Terabox v4.4.2</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v4.4.2</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Alat</span></div></div></a>                                            </div>
+                    <div class="section-header" id="games-section">
+                        <div class="section-title-group">
+                            <span class="section-icon"><i class="fa-solid fa-gamepad"></i></span>
+                            <h2>Updated Games</h2>
+                        </div>
+                        <button class="view-all-btn">View All &gt;</button>
+                    </div>
+                    <div class="app-list" id="update-games-list">
+                        <a href="games/go-speed-traffic-rider-v104/" class="app-card" data-title="GAMES"><div class="card-image-container"><img src="https://nixymine.my.id/games/go-speed-traffic-rider-v104/icon.jpg" alt="Go Speed: Traffic Rider v1.0.4"></div><div class="card-content"><div class="card-title-row"><h3>Go Speed: Traffic Rider v1.0.4</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v1.0.4</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Racing</span></div></div></a>
+                        <a href="games/idle-breaker---loot--survive-v143/" class="app-card" data-title="GAMES"><div class="card-image-container"><img src="https://nixymine.my.id/games/idle-breaker---loot--survive-v143/icon.webp" alt="Idle Breaker - Loot &amp; Survive v1.4.3"></div><div class="card-content"><div class="card-title-row"><h3>Idle Breaker - Loot &amp; Survive v1.4.3</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v1.4.3</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Action</span></div></div></a>
+                        <a href="games/dungeon-age-of-heroes-v114819/" class="app-card" data-title="GAMES"><div class="card-image-container"><img src="https://nixymine.my.id/games/dungeon-age-of-heroes-v114819/icon.png" alt="Dungeon: Age of Heroes v1.14.819"></div><div class="card-content"><div class="card-title-row"><h3>Dungeon: Age of Heroes v1.14.819</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v1.14.819</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Role Playing</span></div></div></a>
+                        <a href="games/shadow-fight-2-special-edition-v1012/" class="app-card" data-title="GAMES"><div class="card-image-container"><img src="https://nixymine.my.id/games/shadow-fight-2-special-edition-v1012/icon.webp" alt="Shadow Fight 2 Special Edition v1.0.12"></div><div class="card-content"><div class="card-title-row"><h3>Shadow Fight 2 Special Edition v1.0.12</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v1.0.12</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Action</span></div></div></a>
+                        <a href="games/farmville-2-country-escape-v283175/" class="app-card" data-title="GAMES"><div class="card-image-container"><img src="https://nixymine.my.id/games/farmville-2-country-escape-v283175/icon.png" alt="FarmVille 2: Country Escape v28.3.175"></div><div class="card-content"><div class="card-title-row"><h3>FarmVille 2: Country Escape v28.3.175</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v28.3.175</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Casual</span></div></div></a>
+                        <a href="games/hungry-shark-world-v711/" class="app-card" data-title="GAMES"><div class="card-image-container"><img src="https://nixymine.my.id/games/hungry-shark-world-v711/icon.webp" alt="Hungry Shark World v7.1.1"></div><div class="card-content"><div class="card-title-row"><h3>Hungry Shark World v7.1.1</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v7.1.1</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Arcade</span></div></div></a>
+                        <a href="games/modern-age-2-v10106/" class="app-card" data-title="GAMES"><div class="card-image-container"><img src="https://nixymine.my.id/games/modern-age-2-v10106/icon.webp" alt="Modern Age 2 v1.0.106"></div><div class="card-content"><div class="card-title-row"><h3>Modern Age 2 MOD APK v1.0.106</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v1.0.106</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Strategy</span></div></div></a>
+                        <a href="games/aliens-vs-zombies-invasion-v250912589/" class="app-card" data-title="GAMES"><div class="card-image-container"><img src="https://nixymine.my.id/games/aliens-vs-zombies-invasion-v250912589/icon.webp" alt="Aliens vs Zombies: Invasion v2509.12.589"></div><div class="card-content"><div class="card-title-row"><h3>Aliens vs Zombies: Invasion v2509.12.589</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v2509.12.589</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Action</span></div></div></a>
+                        <a href="games/soccer-kicks-strike-game-v158-4/" class="app-card" data-title="GAMES"><div class="card-image-container"><img src="https://nixymine.my.id/games/soccer-kicks-strike-game-v158-4/icon.webp" alt="Soccer Kicks Strike Game v15.8"></div><div class="card-content"><div class="card-title-row"><h3>Soccer Kicks Strike Game v15.8</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v15.8</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Sports</span></div></div></a>
+                        <a href="games/carx-highway-racing-v1756/" class="app-card" data-title="GAMES"><div class="card-image-container"><img src="https://nixymine.my.id/games/carx-highway-racing-v1756/icon.jpg" alt="CarX Highway Racing v1.75.6"></div><div class="card-content"><div class="card-title-row"><h3>CarX Highway Racing v1.75.6</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v1.75.6</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Racing</span></div></div></a>
+                        <a href="games/angry-birds-friends-v1351/" class="app-card" data-title="GAMES"><div class="card-image-container"><img src="https://nixymine.my.id/games/angry-birds-friends-v1351/icon.png" alt="Angry Birds Friends v13.5.1"></div><div class="card-content"><div class="card-title-row"><h3>Angry Birds Friends v13.5.1</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v13.5.1</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Aksi</span></div></div></a>
+                        <a href="games/breaker-fun-2-zombie-brick-v291/" class="app-card" data-title="GAMES"><div class="card-image-container"><img src="https://nixymine.my.id/games/breaker-fun-2-zombie-brick-v291/icon.jpg" alt="Breaker Fun 2: Zombie Brick v2.9.1"></div><div class="card-content"><div class="card-title-row"><h3>Breaker Fun 2: Zombie Brick v2.9.1</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v2.9.1</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Aksi</span></div></div></a>
+                        <a href="games/dragon-kingdom-fantasy-city-v180/" class="app-card" data-title="GAMES"><div class="card-image-container"><img src="https://nixymine.my.id/games/dragon-kingdom-fantasy-city-v180/icon.webp" alt="Dragon Kingdom: Fantasy City v1.8.0"></div><div class="card-content"><div class="card-title-row"><h3>Dragon Kingdom: Fantasy City v1.8.0</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v1.8.0</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Strategi</span></div></div></a>
+                        <a href="games/farm-supermarket-simulator-v20/" class="app-card" data-title="GAMES"><div class="card-image-container"><img src="https://nixymine.my.id/games/farm-supermarket-simulator-v20/icon.webp" alt="Farm Supermarket Simulator v20"></div><div class="card-content"><div class="card-title-row"><h3>Farm Supermarket Simulator v20</h3></div><div class="card-details"><span><strong><i class="fa-solid fa-code-branch"></i> Version</strong> v20</span></div><div class="card-details"><span><strong><i class="fa-solid fa-folder-open"></i> Category</strong> Strategi</span></div></div></a>
+                        </div>
+
+                    <div class="section-header" id="blog-section" style="margin-top: 50px;">
+                        <div class="section-title-group">
+                            <span class="section-icon" style="background-color: #e5f7f0; color: #4fd18e;"><i class="fa-solid fa-file-alt"></i></span>
+                            <h2>Artikel Blog</h2>
+                        </div>
+                        <button class="view-all-btn">View All &gt;</button>
+                    </div>
+                    <div class="blog-list app-list" id="blog-list">
+    <a href="https://nixymine.my.id/blog/revolusi-ai-gebrakan-terbaru-di-dunia-teknologi.html" class="blog-post-item">Revolusi AI:  Gebrakan Terbaru di Dunia Teknologi</a>
+    <a href="https://nixymine.my.id/blog/revolusi-ai-dan-gadget-pintar-tren-teknologi-2025-yang-mengubah-hidup.html" class="blog-post-item">Revolusi AI dan Gadget Pintar: Tren Teknologi 2025 yang Mengubah Hidup</a>
+    <a href="https://nixymine.my.id/blog/revolusi-ai-dan-gadget-pintar-2025-panduan-lengkap.html" class="blog-post-item">Revolusi AI dan Gadget Pintar 2025: Panduan Lengkap!</a>
+    <a href="https://nixymine.my.id/blog/revolusi-ai-2025-fitur-fitur-canggih-dan-dampaknya-pada-kehidupan-sehari-hari.html" class="blog-post-item">Revolusi AI 2025:  Fitur-Fitur Canggih dan Dampaknya pada Kehidupan Sehari-hari</a>
+    <a href="https://nixymine.my.id/blog/gebrakan-ai-terbaru-revolusi-teknologi-di-ujung-jari-anda.html" class="blog-post-item">Gebrakan AI Terbaru:  Revolusi Teknologi di Ujung Jari Anda!</a>
+    <a href="https://nixymine.my.id/blog/revolusi-ai-bagaimana-kecerdasan-buatan-mengubah-hidup-kita-di-2025.html" class="blog-post-item">Revolusi AI:  Bagaimana Kecerdasan Buatan Mengubah Hidup Kita di 2025</a>
+    <a href="https://nixymine.my.id/blog/revolusi-ai-2025-fitur-canggih-dampaknya-pada-kehidupan-sehari-hari.html" class="blog-post-item">Revolusi AI 2025:  Fitur Canggih &amp; Dampaknya pada Kehidupan Sehari-hari</a>
+    <a href="https://nixymine.my.id/blog/revolusi-ai-bagaimana-kecerdasan-buatan-mengubah-hidup-kita-sehari-hari.html" class="blog-post-item">Revolusi AI:  Bagaimana Kecerdasan Buatan Mengubah Hidup Kita Sehari-hari</a>
+    <a href="https://nixymine.my.id/blog/gebrakan-ai-terbaru-kecerdasan-buatan-yang-mengubah-dunia.html" class="blog-post-item">Gebrakan AI Terbaru:  Kecerdasan Buatan yang Mengubah Dunia</a>
+    <a href="https://nixymine.my.id/blog/rahasia-terungkap-10-tips-trik-android-terbaru-yang-wajib-anda-coba.html" class="blog-post-item">Rahasia Terungkap! 10 Tips &amp; Trik Android Terbaru yang Wajib Anda Coba!</a>
+    <a href="https://nixymine.my.id/blog/rahasia-ai-canggih-di-android-tips-trik-aplikasi-terbaru.html" class="blog-post-item">Rahasia AI Canggih di Android: Tips &amp; Trik Aplikasi Terbaru!</a>
+    <a href="https://nixymine.my.id/blog/rahasia-terungkap-android-automatis-dengan-ai-canggih.html" class="blog-post-item">Rahasia Terungkap! Android Automatis dengan AI Canggih</a>
+    <a href="https://nixymine.my.id/blog/rahasia-terungkap-5-aplikasi-android-ai-canggih-yang-wajib-anda-coba.html" class="blog-post-item">Rahasia Terungkap! 5 Aplikasi Android AI Canggih yang Wajib Anda Coba</a>
+    <a href="https://nixymine.my.id/blog/rahasia-ai-canggih-di-balik-aplikasi-android-favoritmu.html" class="blog-post-item">Rahasia AI Canggih di Balik Aplikasi Android Favoritmu!</a>
+    <a href="https://nixymine.my.id/blog/rahasia-terungkap-fitur-android-tersembunyi-yang-bikin-kamu-takjub.html" class="blog-post-item">Rahasia Terungkap!  Fitur Android Tersembunyi yang Bikin Kamu Takjub!</a>
+    <a href="https://nixymine.my.id/blog/rahasia-terungkap-10-tips-ampuh-mengoptimalkan-baterai-android-anda.html" class="blog-post-item">Rahasia Terungkap! 10 Tips Ampuh Mengoptimalkan Baterai Android Anda</a>
+    <a href="https://nixymine.my.id/blog/rahasia-tersembunyi-android-10-tips-trik-yang-jarang-diketahui.html" class="blog-post-item">Rahasia Tersembunyi Android: 10 Tips &amp; Trik yang Jarang Diketahui!</a>
+    <a href="https://nixymine.my.id/blog/rahasia-tersembunyi-android-10-trik-canggih-yang-jarang-diketahui.html" class="blog-post-item">Rahasia Tersembunyi Android: 10 Trik Canggih yang Jarang Diketahui!</a>
+    <a href="https://nixymine.my.id/blog/rahasia-tersembunyi-android-14-fitur-fitur-canggih-yang-belum-anda-ketahui.html" class="blog-post-item">Rahasia Tersembunyi Android 14: Fitur-Fitur Canggih yang Belum Anda Ketahui!</a>
+                    </div>
+                    </div>
+
+                <div id="search-results-container" style="display: none;">
+                    <div class="section-header">
+                        <div class="section-title-group">
+                             <span class="section-icon" style="background-color: #e5f7f0; color: #4fd18e;"><i class="fa-solid fa-search"></i></span>
+                            <h2>Hasil Pencarian</h2>
+                        </div>
+                    </div>
+                    <div class="app-list results-list" id="search-results-list"></div>
+
+                    <div class="section-header" id="blog-search-header" style="display: none; margin-top: 40px;">
+                        <div class="section-title-group">
+                            <span class="section-icon" style="background-color: #e5f7f0; color: #4fd18e;"><i class="fa-solid fa-file-alt"></i></span>
+                            <h2>Hasil Artikel</h2>
+                        </div>
+                    </div>
+                    <div class="blog-list app-list results-list" id="blog-search-results-list"></div>
+                    
+                    <p id="no-results-message" style="display: none; text-align: center; margin-top: 20px; color: var(--text-color-light);">Tidak ada hasil yang ditemukan.</p>
+                </div>
+    
+                <div id="category-results-container" style="display: none;">
+                    <div class="section-header">
+                        <div class="section-title-group">
+                             <span class="section-icon" style="background-color: #e5f0f7; color: #4f95d1;"><i class="fa-solid fa-tags"></i></span>
+                            <h2 id="category-results-title">Result Category</h2>
+                        </div>
+                    </div>
+                    <div class="app-list results-list" id="category-results-list"></div>
+                </div>
+            </div>
+
+            <div id="common-sections">
+                <div class="categories-wrapper">
+                    <div class="section-header" id="apps-categories-section">
+                        <div class="section-title-group">
+                             <span class="section-icon" style="background-color: #e7e5f7; color: #564fd1;"><i class="fa-solid fa-folder-open"></i></span>
+                            <h2>APPS - Category</h2>
+                        </div>
+                    </div>
+                    <div class="category-grid-container" id="app-categories-grid"></div>
+
+                    <div class="section-header" id="games-categories-section" style="margin-top: 30px;">
+                        <div class="section-title-group">
+                            <span class="section-icon"><i class="fa-solid fa-folder-open"></i></span>
+                            <h2>GAMES - Category</h2>
+                        </div>
+                    </div>
+                    <div class="category-grid-container" id="game-categories-grid"></div>
+                </div>
+                
+                <footer class="footer-container">
+                	<div class="section-header">
+                   <div class="section-title-group">
+                   <span class="section-icon" style="background-color: #e9ecef; color: #6c757d;"><i class="fa fa-question-circle"></i></span>
+                    <h2>NIXY MINE - About Us</h2>
+                    </div>
+                    </div>
+                    <div class="footer-links-grid">
+                        <a href="privacy-policy.html" class="footer-link">Privacy</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                    <a href="terms.html" class="footer-link">Terms</a>
+                    <a href="disclaimer.html" class="footer-link">Disclaimer</a>
+                    <a href="dmca.html" class="footer-link">DMCA</a>
+                    <a href="sitemap.html" class="footer-link">Sitemap</a>
+                    <a href="cookie-policy.html" class="footer-link">Cookie</a>
+                    </div>
+                    <div class="footer-social-icons">
+                        <a href="https://t.me/+JZVMFir6yM0yZmY1" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="/" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="/" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="footer-copyright">
+                        All Right Reserved Copyright © 2025
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </main>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const homeContent = document.getElementById('home-content');
+        const searchResultsContainer = document.getElementById('search-results-container');
+        const categoryResultsContainer = document.getElementById('category-results-container');
+        const searchResultsList = document.getElementById('search-results-list');
+        const categoryResultsList = document.getElementById('category-results-list');
+        const categoryResultsTitle = document.getElementById('category-results-title');
+        const noResultsMessage = document.getElementById('no-results-message');
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuOverlay = document.getElementById('menu-overlay');
+        const menuClose = document.getElementById('menu-close');
+        const searchToggle = document.getElementById('search-toggle');
+        const searchOverlay = document.getElementById('search-overlay');
+        const searchClose = document.getElementById('search-close');
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const darkModeIcon = darkModeToggle.querySelector('i');
+        const mainSearchInput = document.getElementById('search-input');
+        const menuSearchInput = document.getElementById('menu-search-input');
+        const allViewAllButtons = document.querySelectorAll('.view-all-btn');
+        const headerLogoLink = document.querySelector('.header-logo a');
+        
+        const blogSearchResultsList = document.getElementById('blog-search-results-list');
+        const blogSearchHeader = document.getElementById('blog-search-header');
+        
+        const populateNewUpdateSection = () => {
+            const newUpdateList = document.getElementById('new-update-list');
+            const appsList = document.getElementById('update-apps-list');
+            const gamesList = document.getElementById('update-games-list');
+            if (!newUpdateList || !appsList || !gamesList) return;
+            const latestApps = Array.from(appsList.querySelectorAll('.app-card')).slice(0, 2);
+            latestApps.forEach(app => newUpdateList.appendChild(app.cloneNode(true)));
+            const latestGames = Array.from(gamesList.querySelectorAll('.app-card')).slice(0, 3);
+            latestGames.forEach(game => newUpdateList.appendChild(game.cloneNode(true)));
+        };
+        
+        const allItems = document.querySelectorAll('#update-apps-list .app-card, #update-games-list .app-card');
+        const allBlogItems = document.querySelectorAll('#blog-list .blog-post-item');
+
+        const generateCategories = (sourceListSelector, targetGridSelector) => {
+            const sourceList = document.querySelector(sourceListSelector);
+            const targetGrid = document.querySelector(targetGridSelector);
+            if (!sourceList || !targetGrid) return;
+            const categories = new Set();
+            sourceList.querySelectorAll('.app-card').forEach(card => {
+                const categoryDetail = card.querySelectorAll('.card-details')[1];
+                if (categoryDetail) {
+                    const categoryText = categoryDetail.textContent.replace('Category', '').trim();
+                    if (categoryText) categories.add(categoryText);
+                }
+            });
+            targetGrid.innerHTML = '';
+            categories.forEach(category => {
+                const link = document.createElement('a');
+                link.className = 'category-button';
+                link.href = '#';
+                link.textContent = category;
+                link.addEventListener('click', e => {
+                    e.preventDefault();
+                    showCategoryResults(category);
+                });
+                targetGrid.appendChild(link);
+            });
+        };
+
+        const showCategoryResults = (categoryName) => {
+            homeContent.style.display = 'none';
+            searchResultsContainer.style.display = 'none';
+            categoryResultsContainer.style.display = 'block';
+            categoryResultsTitle.textContent = `Result: ${categoryName}`;
+            categoryResultsList.innerHTML = '';
+
+            const matchingItems = [];
+            allItems.forEach(card => {
+                const categoryElement = card.querySelectorAll('.card-details')[1];
+                if (categoryElement && categoryElement.textContent.replace('Category', '').trim() === categoryName) {
+                    matchingItems.push(card);
+                }
+            });
+
+            const addedBaseNames = new Set();
+            matchingItems.forEach(item => {
+                const title = item.querySelector('h3').textContent;
+                const baseName = title.replace(/\s*v[\d\.]+.*$/i, '').trim();
+                if (!addedBaseNames.has(baseName)) {
+                    categoryResultsList.appendChild(item.cloneNode(true));
+                    addedBaseNames.add(baseName);
+                }
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+        
+        const animateCards = () => {
+            const cards = document.querySelectorAll('#home-content .app-card, #home-content .blog-post-item');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('card-anim');
+                }, index * 80);
+            });
+        };
+
+        populateNewUpdateSection();
+        generateCategories('#update-apps-list', '#app-categories-grid');
+        generateCategories('#update-games-list', '#game-categories-grid');
+        animateCards();
+        
+        const showHomeContent = () => {
+            homeContent.style.display = 'block';
+            searchResultsContainer.style.display = 'none';
+            categoryResultsContainer.style.display = 'none';
+        };
+        
+        const toggleOverlay = (overlay, isActive) => {
+            overlay.classList.toggle('active', isActive);
+            document.body.style.overflow = isActive ? 'hidden' : '';
+        };
+
+        menuToggle.addEventListener('click', () => toggleOverlay(menuOverlay, true));
+        menuClose.addEventListener('click', () => toggleOverlay(menuOverlay, false));
+        searchToggle.addEventListener('click', () => {
+            toggleOverlay(searchOverlay, true);
+            mainSearchInput.focus();
+        });
+        searchClose.addEventListener('click', () => toggleOverlay(searchOverlay, false));
+
+        const applyTheme = (theme) => {
+            document.body.classList.toggle('dark-mode', theme === 'dark');
+            darkModeIcon.className = theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+        };
+        let currentTheme = localStorage.getItem('theme') || 'light';
+        applyTheme(currentTheme);
+        darkModeToggle.addEventListener('click', () => {
+            currentTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+            applyTheme(currentTheme);
+            localStorage.setItem('theme', currentTheme);
+        });
+
+        const executeSearch = (query) => {
+            const searchTerm = query.toLowerCase().trim();
+            if (!searchTerm) {
+                showHomeContent();
+                return;
+            }
+
+            searchResultsList.innerHTML = '';
+            blogSearchResultsList.innerHTML = '';
+            blogSearchHeader.style.display = 'none';
+
+            const matchingAppsGames = [];
+            allItems.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const categoryElement = card.querySelectorAll('.card-details')[1];
+                const categoryText = categoryElement ? categoryElement.textContent.toLowerCase() : '';
+                if (title.includes(searchTerm) || categoryText.includes(searchTerm)) {
+                    matchingAppsGames.push(card);
+                }
+            });
+            const addedAppGameBaseNames = new Set();
+            matchingAppsGames.forEach(item => {
+                const title = item.querySelector('h3').textContent;
+                const baseName = title.replace(/\s*v[\d\.]+.*$/i, '').trim();
+                if (!addedAppGameBaseNames.has(baseName)) {
+                    searchResultsList.appendChild(item.cloneNode(true));
+                    addedAppGameBaseNames.add(baseName);
+                }
+            });
+
+            const matchingBlogItems = [];
+            allBlogItems.forEach(item => {
+                const title = item.textContent.toLowerCase();
+                if (title.includes(searchTerm)) {
+                    matchingBlogItems.push(item);
+                }
+            });
+            matchingBlogItems.forEach(item => {
+                blogSearchResultsList.appendChild(item.cloneNode(true));
+            });
+
+            const appResultsFound = searchResultsList.children.length > 0;
+            const blogResultsFound = blogSearchResultsList.children.length > 0;
+
+            if (blogResultsFound) {
+                blogSearchHeader.style.display = 'flex'; // Tampilkan header jika ada hasil artikel
+            }
+
+            noResultsMessage.style.display = (!appResultsFound && !blogResultsFound) ? 'block' : 'none';
+
+            homeContent.style.display = 'none';
+            categoryResultsContainer.style.display = 'none';
+            searchResultsContainer.style.display = 'block';
+            if(searchOverlay.classList.contains('active')) toggleOverlay(searchOverlay, false);
+            if(menuOverlay.classList.contains('active')) toggleOverlay(menuOverlay, false);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        const handleSearchEvent = (event) => {
+            if (event.key === 'Enter') executeSearch(event.target.value);
+        };
+
+        mainSearchInput.addEventListener('keypress', handleSearchEvent);
+        menuSearchInput.addEventListener('keypress', handleSearchEvent);
+        
+        allViewAllButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const listContainer = this.parentElement.nextElementSibling;
+                if (listContainer && (listContainer.classList.contains('app-list') || listContainer.classList.contains('blog-list'))) {
+                    listContainer.classList.add('show-all');
+                    this.style.display = 'none'; 
+                }
+            });
+        });
+
+        headerLogoLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            showHomeContent();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.querySelectorAll('#menu-overlay a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', () => {
+        toggleOverlay(menuOverlay, false);
+
+        const targetId = anchor.getAttribute('href');
+        const targetSectionHeader = document.querySelector(targetId);
+
+        if (targetSectionHeader) {
+            const viewAllButton = targetSectionHeader.querySelector('.view-all-btn');
+
+            if (viewAllButton) {
+                setTimeout(() => {
+                    viewAllButton.click();
+                }, 50);
+            }
+        }
+    });
+    });
+    });
+    </script>
+
+
+</body></html>
