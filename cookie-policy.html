@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy - NIXY MINE</title>
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <meta name="description" content="Kebijakan Cookie untuk NIXY MINE. Pelajari tentang cookie, bagaimana kami menggunakannya di situs kami, dan bagaimana Anda dapat mengelolanya.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* CSS di sini sama persis dengan halaman sebelumnya */
+        :root {
+            --bg-color: #f0f2f5;
+            --text-color: #2c3e50;
+            --text-color-light: #6c757d;
+            --card-bg: #ffffff;
+            --header-bg: #ffffff;
+            --shadow-color: rgba(0, 0, 0, 0.08);
+            --border-color: #e9e9e9;
+            --blue-color: #007bff; 
+        }
+
+        body.dark-mode {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --text-color-light: #a0a0a0;
+            --card-bg: #1e1e1e;
+            --header-bg: #1e1e1e;
+            --shadow-color: rgba(0, 0, 0, 0.4);
+            --border-color: #333;
+        }
+        
+        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px 15px; }
+
+        header {
+            background-color: var(--header-bg);
+            box-shadow: 0 2px 4px var(--shadow-color);
+            padding: 10px 15px;
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky; 
+            top: 0; 
+            z-index: 998;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .header-logo img {
+            height: 30px;
+            display: block;
+        }
+        .header-btn {
+            background: none; border: none;
+            font-size: 1.4em;
+            color: var(--text-color-light);
+            cursor: pointer;
+            padding: 5px;
+        }
+        .header-btn:hover { color: var(--text-color); }
+        
+        .static-page-container {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 25px;
+            margin-top: 20px;
+            box-shadow: 0 4px 12px var(--shadow-color);
+        }
+        .static-page-container h1 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+        .static-page-container h2 {
+            font-size: 1.4em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        .static-page-container p, .static-page-container ul {
+            color: var(--text-color-light);
+            margin-bottom: 15px;
+        }
+        .static-page-container ul {
+            padding-left: 20px;
+        }
+        .static-page-container li {
+            margin-bottom: 10px;
+        }
+        .static-page-container a {
+            color: var(--blue-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .static-page-container a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-container {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 12px var(--shadow-color);
+            margin-top: 50px;
+        }
+        .section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding: 0; }
+        .section-title-group { display: flex; align-items: center; gap: 10px; }
+        .section-icon { width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; background-color: #e9ecef; border-radius: 50%; color: #6c757d; font-size: 1.2em; }
+        .section-header h2 { font-size: 1.4em; color: var(--text-color); }
+        .footer-links-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px; }
+        .footer-link { background-color: var(--bg-color); color: var(--text-color); padding: 8px; border-radius: 8px; text-align: center; text-decoration: none; font-size: 0.8em; font-weight: 500; transition: all 0.3s ease; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .footer-link:hover { background-color: var(--blue-color); color: white; }
+        .footer-social-icons { display: flex; justify-content: center; gap: 25px; padding: 20px 0; border-top: 1px solid var(--border-color); }
+        .footer-social-icons a { color: var(--text-color-light); font-size: 1.5em; transition: all 0.3s ease; }
+        .footer-social-icons a:hover { color: var(--blue-color); transform: scale(1.1); }
+        .footer-copyright { text-align: center; font-size: 0.8em; color: var(--text-color-light); padding-top: 15px; border-top: 1px solid var(--border-color); }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <a href="index.html" class="header-btn" aria-label="Kembali ke Beranda"><i class="fa-solid fa-arrow-left"></i></a>
+            <div class="header-logo">
+                <a href="index.html"><img src="navigasi.png" alt="NIXY MINE Logo"></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="static-page-container">
+                <h1>Kebijakan Cookie (Cookie Policy)</h1>
+
+                <h2>Apa Itu Cookie?</h2>
+                <p>Seperti praktik umum pada hampir semua situs web profesional, situs ini menggunakan cookie, yaitu file kecil yang diunduh ke komputer Anda, untuk meningkatkan pengalaman Anda. Halaman ini menjelaskan informasi apa yang mereka kumpulkan, bagaimana kami menggunakannya, dan mengapa kami terkadang perlu menyimpan cookie ini. Kami juga akan membagikan bagaimana Anda dapat mencegah cookie ini disimpan, namun ini dapat menurunkan atau 'merusak' elemen-elemen tertentu dari fungsionalitas situs.</p>
+
+                <h2>Bagaimana Kami Menggunakan Cookie</h2>
+                <p>Kami menggunakan cookie untuk berbagai alasan yang dirinci di bawah ini. Sayangnya, dalam kebanyakan kasus, tidak ada opsi standar industri untuk menonaktifkan cookie tanpa sepenuhnya menonaktifkan fungsionalitas dan fitur yang mereka tambahkan ke situs ini. Disarankan agar Anda membiarkan semua cookie aktif jika Anda tidak yakin apakah Anda memerlukannya atau tidak, seandainya cookie tersebut digunakan untuk menyediakan layanan yang Anda gunakan.</p>
+
+                <h2>Menonaktifkan Cookie</h2>
+                <p>Anda dapat mencegah pengaturan cookie dengan menyesuaikan pengaturan pada browser Anda (lihat Bantuan browser Anda untuk mengetahui caranya). Perlu diketahui bahwa menonaktifkan cookie akan memengaruhi fungsionalitas situs ini dan banyak situs web lain yang Anda kunjungi. Menonaktifkan cookie biasanya akan mengakibatkan penonaktifan fungsionalitas dan fitur tertentu dari situs ini. Oleh karena itu, disarankan agar Anda tidak menonaktifkan cookie.</p>
+
+                <h2>Cookie Pihak Ketiga</h2>
+                <p>Dalam beberapa kasus khusus, kami juga menggunakan cookie yang disediakan oleh pihak ketiga tepercaya. Bagian berikut merinci cookie pihak ketiga mana yang mungkin Anda temui melalui situs ini.</p>
+                <ul>
+                    <li>Situs ini menggunakan <strong>Google Analytics</strong> yang merupakan salah satu solusi analisis paling tersebar luas dan tepercaya di web untuk membantu kami memahami bagaimana Anda menggunakan situs dan cara kami dapat meningkatkan pengalaman Anda.</li>
+                    <li>Kami juga menggunakan <strong>Google AdSense</strong> untuk menayangkan iklan. Layanan ini menggunakan cookie DoubleClick untuk menayangkan iklan yang lebih relevan di seluruh web dan membatasi berapa kali iklan tertentu ditampilkan kepada Anda.</li>
+                </ul>
+
+                <h2>Informasi Lebih Lanjut</h2>
+                <p>Semoga ini telah menjelaskan banyak hal untuk Anda. Seperti yang disebutkan sebelumnya, jika ada sesuatu yang Anda tidak yakin apakah Anda perlukan atau tidak, biasanya lebih aman untuk membiarkan cookie tetap aktif. Jika Anda masih mencari informasi lebih lanjut, Anda dapat menghubungi kami melalui salah satu metode kontak pilihan kami.</p>
+
+            </div>
+
+            <footer class="footer-container">
+                <div class="section-header">
+                   <div class="section-title-group">
+                   <span class="section-icon"><i class="fa fa-question-circle"></i></span>
+                    <h2>NIXY MINE - About Us</h2>
+                    </div>
+                </div>
+                <div class="footer-links-grid">
+                    <a href="privacy-policy.html" class="footer-link">Privacy</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                    <a href="terms.html" class="footer-link">Terms</a>
+                    <a href="disclaimer.html" class="footer-link">Disclaimer</a>
+                    <a href="dmca.html" class="footer-link">DMCA</a>
+                    <a href="sitemap.html" class="footer-link">Sitemap</a>
+                    <a href="cookie-policy.html" class="footer-link">Cookie</a>
+                </div>
+                <div class="footer-social-icons">
+                    <a href="https://t.me/+JZVMFir6yM0yZmY1" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="/" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    <a href="/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="/" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="footer-copyright">
+                    All Right Reserved Copyright &copy; <span id="current-year"></span>
+                </div>
+            </footer>
+        </div>
+    </main>
+    
+    <script>
+        // Mengatur tahun copyright dan tanggal update secara otomatis
+        const today = new Date();
+        document.getElementById('current-year').textContent = today.getFullYear();
+        
+        const lastUpdatedElement = document.getElementById('last-updated');
+        if (lastUpdatedElement) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            lastUpdatedElement.textContent = today.toLocaleDateString('id-ID', options);
+        }
+    </script>
+
+</body>
+</html>
